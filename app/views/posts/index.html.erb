@@ -1,5 +1,7 @@
 <h1>Awesome Blog</h1>
 
+<h4><%= "No Prerender" if params[:noprerender] %></h4>
+
 <%= react_component('PostsList',
                     { initialPosts: @posts },
                     { prerender: params[:noprerender].nil? }) %>
